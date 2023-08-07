@@ -4,7 +4,8 @@ import './index.css';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import LoginPage from './components/LoginPage';
 import ListPage from './components/ListPage';
-import DocumentPage from './components/DocumentPage';
+import PostDetailPage from './components/PostDetailPage';
+import CreatePostPage from './components/CreatePostPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -18,8 +19,12 @@ const router = createBrowserRouter([
     element: <LoginPage />,
   },
   {
-    path: "/document/:documentId",
-    element: <DocumentPage />,
+    path: "/post/:documentId",
+    element: <PostDetailPage />,
+  },
+  {
+    path: "/post/create",
+    element: <CreatePostPage />,
   },
 ]);
 
